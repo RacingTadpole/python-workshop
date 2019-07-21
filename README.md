@@ -1,0 +1,56 @@
+# Quick start
+
+## Install PyCharm or equivalent
+
+Install PyCharm or a similar editor. A vanilla text editor is fine too.
+
+## Install Python and pipenv
+
+See the [pipenv documentation](https://docs.pipenv.org/install/) for the steps to install python 3, pip and pipenv.
+
+On a Mac, you will need to install python 3 as described above (python 2 is the default).
+The simplest way to install `pipenv` is to install homebrew, and then type `brew install pipenv`.
+ 
+On linux, this [link](https://packaging.python.org/install_requirements_linux/#installing-pip-setuptools-wheel-with-linux-package-managers)
+may be helpful.
+
+## Install the Required Packages
+
+Enter the `python-workshop` directory, and type:
+
+```
+pipenv install --dev
+```
+
+This creates an environment containing the required packages, which you enter by typing:
+
+```
+pipenv shell
+```
+
+## Run the tests
+
+In the pipenv environment, make sure this command runs without error:
+
+```
+bin/check_code
+```
+
+## Open Jupyter lab
+
+In the pipenv environment, type:
+
+```
+jupyter lab
+```
+
+# Agenda
+
+* Static typing in Python with mypy
+* Docstring testing with pytest
+* Jupyter notebooks
+* Other packages that make your life easier such as "attrs", "radon".
+* Make your code easy to read by defining your own iteration or call method (`__iter__`)
+* A short intro to numpy and pandas for "scientific computing".
+* Annoying practical setup stuff: pipenv, Pipfiles vs setup.py, basic directory structure, importing stuff, pip -e.
+* Generators
