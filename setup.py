@@ -16,7 +16,7 @@ import os
 from setuptools import setup, find_packages
 
 # Package meta-data.
-NAME = 'python-workshop'
+NAME = 'python_workshop'
 DESCRIPTION = 'Introduction to python workshop'
 # URL = 'https://github.com/me/myproject'
 EMAIL = 'arthur.street@data61.csiro.au'
@@ -73,6 +73,7 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: Implementation :: CPython'  # Haven't tried others.
     ],
     # $ setup.py publish support.
