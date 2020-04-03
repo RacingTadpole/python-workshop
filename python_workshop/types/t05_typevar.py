@@ -6,7 +6,12 @@ from typing import Sequence, TypeVar, List, Union, cast
 A = TypeVar('A')  # Can be anything
 
 
-# Can use to define "generic functions", eg:
+# Can use to define "generic functions"
+# Eg. improve our "get_first" function from before, which required Sequence[int].
+
+def get_first(seq: Sequence[A]) -> A:
+    return seq[0]
+
 
 def repeat(x: A, n: int) -> List[A]:
     """
@@ -22,7 +27,7 @@ def repeat(x: A, n: int) -> List[A]:
     return [x] * n
 
 
-# Mypy does not let you cannot combine List[int] and List[str]
+# Mypy does not let you combine List[int] and List[str]
 a = repeat(7, 3)
 b = repeat('ab', 3)
 #  print(a + b)  # mypy raises an error (and so does PyCharm!)
@@ -31,19 +36,6 @@ b = repeat('ab', 3)
 # Could work around this using cast.
 MyList = List[Union[int, str]]
 print(cast(MyList, a) + cast(MyList, b))
-
-
-def get_first(seq: Sequence[A]) -> A:
-    """
-    Return the first element of the sequence.
-    >>> get_first([1, 2, 3, 4])
-    1
-    >>> get_first([Decimal('1.2'), 2, 3])
-    Decimal('1.2')
-    >>> get_first(['a', 'b', 'c'])
-    'a'
-    """
-    return seq[0]
 
 
 # Must be all Decimals or all floats/ints

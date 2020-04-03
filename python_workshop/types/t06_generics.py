@@ -4,7 +4,9 @@ from typing import TypeVar, Generic, List
 T = TypeVar('T')
 
 
-# The Stack class can be used to represent a stack of any type: Stack[int], Stack[Tuple[int, str]].
+# Just as List, Sequence take a type, so can your classes.
+
+# Eg. Stack[int], Stack[Tuple[int, str]] :
 
 class Stack(Generic[T]):
     def __init__(self) -> None:
