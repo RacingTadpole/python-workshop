@@ -7,10 +7,7 @@ The big ones for me:
 - MUCH easier to debug other people's code - and your own - if you know what sort of thing every function returns, and expects
 - Your IDE can click through to definitions of all your variables
 - You get warned when things might be None, and have to explicitly deal with it.
-
-Also:
-
-- Easier to refactor, eg. change return value from int to list of ints
+- Easier to refactor, eg. change return value from int to list of ints, set of ints, frozenset of ints
 
 ## How?
 

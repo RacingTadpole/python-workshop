@@ -8,7 +8,21 @@ def stringify(num: int) -> str:
     return str(num)
 
 
-# You can specify types in lists, sets, dicts, eg:
+# Add default value for an argument after the type annotation
+def f(num1: int, my_float: float = 3.5) -> float:
+    return num1 + my_float
+
+
+# You could use list...
+def triplicate(num: int) -> list:
+    return [num, num, num]
+
+
+# But better to specify types in lists, sets, dicts, eg:
+def triplicate2(num: int) -> List[int]:
+    return [num] * 3
+
+
 def get_first(values: List[int]) -> int:
     return values[0]
 
@@ -17,24 +31,21 @@ def get_first(values: List[int]) -> int:
 def splice(keys: List[str], values: List[int]) -> Dict[str, int]:
     return {k: v for k, v in zip(keys, values)}
 
-
-# Add default value for an argument after the type annotation
-def f(num1: int, my_float: float = 3.5) -> float:
-    return num1 + my_float
+# Try changing the return type and running mypy.
 
 
+# Can use class names as types
 class Foo:
     def __init__(self, name: str) -> None:
         self.name = name
 
 
-# Can use class names as types
 def fooify(name: str) -> Foo:
     return Foo(name)
 
 
 foo = fooify('bar')
-# reveal_type(foo)  # Revealed type is 'python_workshop.02-functions.Foo'
+# reveal_type(foo)  # Revealed type is 'python_workshop.types.t01_functions.Foo'
 print(foo.name)
 
-# If you get really stuck, can add:  # type: ignore
+# If you get really stuck, can ignore typing on a line with:  # type: ignore
