@@ -38,4 +38,5 @@ def g(n: int) -> Iterator[int]:
         yield i
         i += 1
 
+
 print(list(g(5)))  # returns [0, 1, 2, 3, 4].

@@ -1,7 +1,7 @@
 # From https://mypy.readthedocs.io/en/stable/generics.html
 from typing import TypeVar, Generic, List
 
-T = TypeVar('T')
+T = TypeVar("T")
 
 
 # Just as List, Sequence take a type, so can your classes.
@@ -26,4 +26,4 @@ class Stack(Generic[T]):
 stack = Stack[int]()
 stack.push(2)
 stack.pop()
-# stack.push('x')  # mypy would complain about this
+# stack.push("x")  # mypy would complain about this

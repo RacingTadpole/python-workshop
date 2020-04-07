@@ -15,7 +15,7 @@ t: Tuple[int, str, float] = (3, "yes", 7.5)
 t2: Tuple[int, ...] = (1, 2, 3)
 
 # Use Optional[] for values that could be None
-s: Optional[str]
+s: Optional[str] = "hello"
 
 # Mypy understands a value can't be None in an if-statement
 if s is not None:

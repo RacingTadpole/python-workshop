@@ -3,7 +3,7 @@ from decimal import Decimal
 from typing import Sequence, TypeVar, List, Union, cast
 
 
-A = TypeVar('A')  # Can be anything
+A = TypeVar("A")  # Can be anything
 
 
 # Can use to define "generic functions"
@@ -16,9 +16,6 @@ def get_first(seq: Sequence[A]) -> A:
 def repeat(x: A, n: int) -> List[A]:
     """
     Return a list containing n references to x.
-    Note the docstring tests.
-    These are run automatically in pytest with the right pytest.ini.
-    Unfortunately mypy doesn't type check them.
     >>> repeat(7, 3)
     [7, 7, 7]
     >>> repeat('ab', 3)
