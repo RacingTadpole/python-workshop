@@ -17,10 +17,10 @@ from setuptools import setup, find_packages
 
 # Package meta-data.
 NAME = 'python_workshop'
-DESCRIPTION = 'Introduction to python workshop'
+DESCRIPTION = 'Introduction to python'
 # URL = 'https://github.com/me/myproject'
-EMAIL = 'arthur.street@data61.csiro.au'
-AUTHOR = 'Data61'
+EMAIL = 'arthurstreet@yahoo.com'
+AUTHOR = 'Arthur Street'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -74,7 +74,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: Implementation :: CPython'  # Haven't tried others.
+        'Programming Language :: Python :: Implementation :: CPython'
     ],
     # $ setup.py publish support.
     # cmdclass={
