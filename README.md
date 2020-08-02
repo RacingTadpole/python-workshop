@@ -56,3 +56,19 @@ In the pipenv environment, type:
 ```
 jupyter lab
 ```
+
+### Use this repo as a template for your own python project
+
+You can clone this repo, and type
+
+```
+bin/rename foo_bar
+```
+
+to get it ready to use as a project named "foo_bar".
+
+Note to finish the process properly, you should then do the following:
+    1. `rm -rf .git`
+    2. Update `README.md`
+    3. Update the description and author in `setup.py`
+    4. `git init && git add --all && git commit -m 'initial commit'`

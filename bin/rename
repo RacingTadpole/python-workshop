@@ -35,7 +35,13 @@ def change_name(old_name: str, new_name: str) -> None:
     os.rename(old_name, new_name)
     print(f'Renamed the {old_name_dash} subdirectory')
 
-    print('Please manually update the README and the description and author in setup.py.')
+    print("""
+    To finish the renaming, please do the following:
+    1. `rm -rf .git`
+    2. Update `README.md`
+    3. Update the description and author in `setup.py`
+    4. `git init && git add --all && git commit -m 'initial commit'`
+    """)
 
 
 if __name__ == '__main__':
